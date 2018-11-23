@@ -1,11 +1,11 @@
 <template>
 
-  <el-dropdown>
+  <el-dropdown @command="moodSelected">
   <span class="el-dropdown-link">
     Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item>Action 1</el-dropdown-item>
+      <el-dropdown-item command="hi">Action 1</el-dropdown-item>
       <el-dropdown-item>Action 2</el-dropdown-item>
       <el-dropdown-item>Action 3</el-dropdown-item>
       <el-dropdown-item >Action 4</el-dropdown-item>
@@ -17,6 +17,11 @@
 
 <script>
   export default{
+      methods: {
+          moodSelected(command){
+              console.log(command)
+          }
+      }
   }
 </script>
 
