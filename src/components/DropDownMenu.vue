@@ -5,11 +5,16 @@
     Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item command="hi">Action 1</el-dropdown-item>
-      <el-dropdown-item>Action 2</el-dropdown-item>
-      <el-dropdown-item>Action 3</el-dropdown-item>
-      <el-dropdown-item >Action 4</el-dropdown-item>
-      <el-dropdown-item >Action 5</el-dropdown-item>
+      <el-dropdown-item command="stressed"> Stressed </el-dropdown-item>
+      <el-dropdown-item> Depressed </el-dropdown-item>
+      <el-dropdown-item> In love </el-dropdown-item>
+      <el-dropdown-item> Heartbroken </el-dropdown-item>
+      <el-dropdown-item> Unmotivated </el-dropdown-item>
+       <el-dropdown-item> Bored </el-dropdown-item>
+        <el-dropdown-item> Lonely </el-dropdown-item>
+         <el-dropdown-item> Curious </el-dropdown-item>
+          <el-dropdown-item> 3atef </el-dropdown-item>
+           <el-dropdown-item> Abla Kamel </el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
 
