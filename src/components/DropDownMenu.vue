@@ -6,15 +6,15 @@
   </span>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item command="stressed"> Stressed </el-dropdown-item>
-      <el-dropdown-item> Depressed </el-dropdown-item>
-      <el-dropdown-item> In love </el-dropdown-item>
-      <el-dropdown-item> Heartbroken </el-dropdown-item>
-      <el-dropdown-item> Unmotivated </el-dropdown-item>
-       <el-dropdown-item> Bored </el-dropdown-item>
-        <el-dropdown-item> Lonely </el-dropdown-item>
-         <el-dropdown-item> Curious </el-dropdown-item>
-          <el-dropdown-item> 3atef </el-dropdown-item>
-           <el-dropdown-item> Abla Kamel </el-dropdown-item>
+      <el-dropdown-item command="depressed"> Depressed </el-dropdown-item>
+      <el-dropdown-item command="inLove"> In love </el-dropdown-item>
+      <el-dropdown-item command="heartbroken"> Heartbroken </el-dropdown-item>
+      <el-dropdown-item command="unmotivated"> Unmotivated </el-dropdown-item>
+       <el-dropdown-item command="bored"> Bored </el-dropdown-item>
+        <el-dropdown-item command="lonely"> Lonely </el-dropdown-item>
+         <el-dropdown-item command="curious"> Curious </el-dropdown-item>
+          <el-dropdown-item command="3atef"> 3atef </el-dropdown-item>
+           <el-dropdown-item command="ablaKamel"> Abla Kamel </el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
 
