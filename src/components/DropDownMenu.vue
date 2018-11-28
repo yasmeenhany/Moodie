@@ -21,11 +21,33 @@
 </template>
 
 <script>
+  import firebase from 'firebase';
+  var config = {
+    apiKey: "AIzaSyBTeATU2uLFj34RPEtmHlnNxyC72w7RGm8",
+    authDomain: "moodie-6f977.firebaseapp.com",
+    databaseURL: "https://moodie-6f977.firebaseio.com",
+    projectId: "moodie-6f977",
+    storageBucket: "moodie-6f977.appspot.com",
+    messagingSenderId: "437544356268"
+  };
+  firebase.initializeApp(config);
+  var db = firebase.firestore();
+  db.settings({
+    timestampsInSnapshots: true
+  });
   export default{
       methods: {
           moodSelected(command){
               console.log(command)
-          }
+            db.collection("mood-genre").get().then((querySnapshot) => {
+              querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc}`);
+              });
+            });
+          },
+      getGenre() {
+
+      }
       }
   }
 </script>

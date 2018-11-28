@@ -9,6 +9,7 @@
   /* eslint-disable no-trailing-spaces */
 
   import DropDownMenu from '@/components/DropDownMenu.vue';
+
   export default {
     name: 'App',
     components: {
