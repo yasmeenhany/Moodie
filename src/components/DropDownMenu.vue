@@ -2,7 +2,7 @@
 
   <el-dropdown @command="moodSelected">
   <span class="el-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Choose a Mood<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item command="XR7pSHJFdfe4gfbzxp8H"> Stressed </el-dropdown-item>
