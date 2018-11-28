@@ -22,13 +22,14 @@
 
 <script>
   import firebase from 'firebase';
+  import con from '../../config.json';
   var config = {
-    apiKey: "AIzaSyBTeATU2uLFj34RPEtmHlnNxyC72w7RGm8",
-    authDomain: "moodie-6f977.firebaseapp.com",
-    databaseURL: "https://moodie-6f977.firebaseio.com",
-    projectId: "moodie-6f977",
-    storageBucket: "moodie-6f977.appspot.com",
-    messagingSenderId: "437544356268"
+    apiKey: con.apiKey,
+    authDomain: con.authDomain,
+    databaseURL: con.databaseURL,
+    projectId: con.projectId,
+    storageBucket: con.storageBucket,
+    messagingSenderId: con.messagingSenderId
   };
   firebase.initializeApp(config);
   var db = firebase.firestore();
