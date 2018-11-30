@@ -5,5 +5,6 @@
   "projectId": "moodie-6f977",
   "storageBucket": "moodie-6f977.appspot.com",
   "messagingSenderId": "437544356268",
-  "apiBaseURL": "https://api.themoviedb.org/3/discover/movie?api_key=19bdcc7204b36f6f718f6cdad2bb3fc7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&with_genres="
+  "apiBaseURL": "https://api.themoviedb.org/3/discover/movie?api_key=19bdcc7204b36f6f718f6cdad2bb3fc7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&with_genres=",
+  "posterBaseURL": "https://image.tmdb.org/t/p/w200"
 }

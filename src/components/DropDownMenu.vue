@@ -34,7 +34,7 @@
   };
   firebase.initializeApp(config);
   var db = firebase.firestore();
-
+  var movies = new Array();
   db.settings({
     timestampsInSnapshots: true
   });
@@ -45,12 +45,18 @@
             var docRef = db.collection("mood-genre").doc(command);
       docRef.get().then(function(doc) {
           if (doc.exists) {
+              console.log("mood: ", command);
               console.log("Document data:", doc.data().genre);
               var url = con.apiBaseURL+ doc.data().genre.toString();
               console.log("URL", url)
             axios.get(url)
               .then(response => {
-                console.log("Poster ", con.posterBaseURL+response.data.results[0].poster_path);
+                console.log("Poster of first movie ", con.posterBaseURL+response.data.results[0].poster_path);
+                movies = response.data.results;
+                var i =0;
+                for(i =0; i< movies.length; i++){
+                  console.log(movies[i]);
+                }
 
               })
               .catch(e => {
