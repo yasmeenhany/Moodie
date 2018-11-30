@@ -5,16 +5,16 @@
     Choose a Mood<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
     <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item command="XR7pSHJFdfe4gfbzxp8H"> Stressed </el-dropdown-item>
-      <el-dropdown-item command="k2IksT9Dfb5Q0h4OPe16"> Depressed </el-dropdown-item>
-      <el-dropdown-item command="4FE1T7lrMW6UyUsUCUmE"> In love </el-dropdown-item>
-      <el-dropdown-item command="dtD164sRvLbcQs85izyq"> Heartbroken </el-dropdown-item>
-      <el-dropdown-item command="IjA6UlcVPGy5I3krrDO3"> Unmotivated </el-dropdown-item>
-      <el-dropdown-item command="a0mZvFLsgATyNGTFgY2t"> Bored </el-dropdown-item>
-      <el-dropdown-item command="fapcdbEEJP7ugsZktMW6"> Lonely </el-dropdown-item>
-      <el-dropdown-item command="3gg0uKKvOxAmjp2LdxZ0"> Curious </el-dropdown-item>
-      <el-dropdown-item command="mGwBIbWS1m0crGc5mjoJ"> 3atef </el-dropdown-item>
-      <el-dropdown-item command="hwtfEJrET5UrzVx1Td7N"> Abla Kamel </el-dropdown-item>
+      <el-dropdown-item command="stressed"> Stressed </el-dropdown-item>
+      <el-dropdown-item command="depressed"> Depressed </el-dropdown-item>
+      <el-dropdown-item command="inLove"> In love </el-dropdown-item>
+      <el-dropdown-item command="heartBroken"> Heartbroken </el-dropdown-item>
+      <el-dropdown-item command="unmotivated"> Unmotivated </el-dropdown-item>
+      <el-dropdown-item command="bored"> Bored </el-dropdown-item>
+      <el-dropdown-item command="lonely"> Lonely </el-dropdown-item>
+      <el-dropdown-item command="curious"> Curious </el-dropdown-item>
+      <el-dropdown-item command="3atef"> 3atef </el-dropdown-item>
+      <el-dropdown-item command="ablaKamel"> Abla Kamel </el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
 
@@ -23,6 +23,7 @@
 <script>
   import firebase from 'firebase';
   import con from '../../config/config.json';
+  import axios from 'axios';
   var config = {
     apiKey: con.apiKey,
     authDomain: con.authDomain,
@@ -39,11 +40,20 @@
   export default{
       methods: {
           moodSelected(command){
-          var docRef = db.collection("mood-genre").doc(command);
 
+            var docRef = db.collection("mood-genre").doc(command);
       docRef.get().then(function(doc) {
           if (doc.exists) {
-              console.log("Document data:", doc.data());
+              console.log("Document data:", doc.data().genre);
+              var url = con.apiBaseURL+ doc.data().genre.toString();
+              console.log("URL", url)
+            axios.get(url)
+              .then(response => {
+                console.log("Response"+ response.data.total_results);
+              })
+              .catch(e => {
+                console.log("error");
+              })
           } else {
               // doc.data() will be undefined in this case
               console.log("No such document!");
@@ -52,9 +62,19 @@
           console.log("Error getting document:", error);
       });
           },
-      getGenre() {
+        getGenre(url) {
+          axios.get(url)
+            .then(response => {
+              // JSON responses are automatically parsed.
+              //this.posts = response.data
+              console.log("Response"+ response.data);
+            })
+            .catch(e => {
+             // this.errors.push(e)
+              console.log("error");
+            })
+        }
 
-      }
       }
   }
 </script>
