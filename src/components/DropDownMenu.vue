@@ -22,7 +22,7 @@
 
 <script>
   import firebase from 'firebase';
-  import con from '../../config.json';
+  import con from '../../config/config.json';
   var config = {
     apiKey: con.apiKey,
     authDomain: con.authDomain,
