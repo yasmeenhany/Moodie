@@ -34,6 +34,7 @@
   };
   firebase.initializeApp(config);
   var db = firebase.firestore();
+
   db.settings({
     timestampsInSnapshots: true
   });
@@ -49,9 +50,11 @@
               console.log("URL", url)
             axios.get(url)
               .then(response => {
-                console.log("Response"+ response.data.total_results);
+                console.log("Poster ", con.posterBaseURL+response.data.results[0].poster_path);
+
               })
               .catch(e => {
+                // this.errors.push(e)
                 console.log("error");
               })
           } else {
