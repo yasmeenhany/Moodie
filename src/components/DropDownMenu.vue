@@ -121,9 +121,7 @@
   .moodie {
     font-family: Helvetica;
     font-weight: bold;
-    height: 800px;
     padding: 15px;
-    background-color: #0f1626;
   }
   .el-dropdown-link {
     cursor: pointer;
