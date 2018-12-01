@@ -148,6 +148,7 @@
 
   .trinity-rings-spinner, .trinity-rings-spinner * {
     box-sizing: border-box;
+    align-content: center;
   }
 
   .trinity-rings-spinner {
@@ -155,6 +156,8 @@
     width: 66px;
     padding: 3px;
     position: relative;
+    left: 50%;
+    top: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
