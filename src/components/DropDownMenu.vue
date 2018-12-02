@@ -29,7 +29,7 @@
       <div class="circle"></div>
     </div>
     <el-row >
-      <el-col :span="4" v-for="movie in movies">
+      <el-col :span="4" v-for="movie in movies" :key="movie.title" v-if="!loading">
         <el-card :body-style="{ padding: '0px', height: '380px', color: '#ff3b3f', background: '#0f1626'}">
           <img :src="movie.poster" class="image">
           <div style="padding: 10px; align-content: center">
@@ -154,8 +154,8 @@
     width: 66px;
     padding: 3px;
     position: relative;
-    left: 50%;
-    top: 30%;
+    left: 47%;
+    top: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
