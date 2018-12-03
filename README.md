@@ -1,5 +1,7 @@
 # Moodie
 
+This is a web application where a user selects a mood from a list of moods provided on the web application, and according to the mood the web application will return a list of movie recommendations that fit for this mood. The application uses Firebase to store the mood to genre mappings and themoviedb api to get movies with the corresponding genres.
+
 > A project for advanced computer lab course
 ## 1) Config
  1.1) Create a file named config.json inside the config folder.
