@@ -2,6 +2,23 @@
 
 > A project for advanced computer lab course
 
+##Docker RUN
+
+``` bash
+# Build the docker container
+docker build -t moodie .
+
+# run the docker container on port 8080
+docker run -p 8080:8080 moodie
+```
+
+##Docker compose
+
+```bash
+# to start the docker container
+docker-compose up
+```
+
 ## Build Setup
 
 ``` bash
