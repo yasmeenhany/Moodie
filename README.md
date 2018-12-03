@@ -2,8 +2,8 @@
 
 > A project for advanced computer lab course
 ## 1) Config
-## 1.1) Create a file named config.json inside the config folder.
-## 1.2) Copy the contents of config.json-example inside the file created at step 1.1.
+ 1.1) Create a file named config.json inside the config folder.
+ 1.2) Copy the contents of config.json-example inside the file created at step 1.1.
 
 ## 2) Option 1: Run with Docker:
 
